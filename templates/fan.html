@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta http-equiv="refresh" content="20";>
+   <h1> Fan Management System </h1>
+   <script>
+    var n={{fanstatus}}
+    function Image(){
+    if (n == 1){
+    document.getElementById("fanimage").src="static/images/fanon.png";
+    }else{
+    document.getElementById("fanimage").src="static/images/fanoff.png";
+    }
+    }
+   </script>
+  </head>
+  <body onload="Image();" style="text-align:center;">
+   <table border="1" align="center"">
+    <tr>
+      <th width="300">Site</th> <th width="300">Congestion</th> <th width="150">Fan Status</th>
+    </tr>
+
+    <tr>
+      <td>Italian Restaurant</td> <td>{{count}} people is here</td> <td><img id="fanimage" name="fanimage"></td>
+    </tr>
+  
+    <tr>
+      <td>Sushi Restaurant</td> <td>3 people is here</td> <td><img src="static/images/fanoff.png"></td>
+    </tr>
+ 
+    <tr>
+      <td>Booth 1</td> <td>5 people is here</td> <td><img src="static/images/fanoff.png"></td>
+    </tr>
+
+    <tr>
+      <td>Booth 2</td> <td>30 people is here</td> <td><img src="static/images/fanon.png"></td>
+    </tr>
+
+   </table>
+  </body>
+</htm>

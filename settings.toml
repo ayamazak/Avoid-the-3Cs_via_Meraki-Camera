@@ -1,0 +1,9 @@
+token = '' #Webex Teams Token
+subscription_key = '' #Azure Subscription-Key
+maps_key = '' #GoogleMaps-Key
+apikey= '' #Meraki-API-Key
+room_id = '' #Webex Teams roomId
+mentioned_id = '' #Webex Teams mentionedPeople
+network_id = '' #Meraki Network ID
+mssn = '' #Meraki MS S/N
+camlist = [] #Meraki MV S/N List
