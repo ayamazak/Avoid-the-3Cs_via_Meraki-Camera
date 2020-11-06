@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/ayamazak/Avoid-the-3Cs_via_Meraki-Camera)
+
 # Avoid the 3Cs via Meraki Camera
 
 We are proposing digital convention center solution using Cisco Products and API, for post COVID-19 new normal.
