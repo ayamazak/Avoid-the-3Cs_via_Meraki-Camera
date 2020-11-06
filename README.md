@@ -30,6 +30,8 @@ The combination of these 3 solutions enables to control the flow of customers, h
 
 ## Use Case Description
 
+![Avoid the 3Cs](static/images/solution1.png)
+
 * Solution 1: Guide customers into vacant restaurants. We will have a method of creating discount coupons only for vacant restaurants.
 
     * Build an event web page with Python + Flask.
@@ -43,6 +45,8 @@ The combination of these 3 solutions enables to control the flow of customers, h
     * When you click the icon of a vacant restaurant, a hyperlink is  displayed  to jump to another web page where you can get a coupon .
 
     People choose cheap and uncrowded restaurants, so this solution can guide people to vacant restaurants
+
+![Avoid the 3Cs](static/images/solution2-3.png)
 
 * Solution 2: When the restaurant gets too crowded, we would like to encourage customers to leave crowded restaurants. For this, we plan to use Digital Signage. The signage will dynamically generate and display automated announcements for the existing customer. We then believe, customers will be drawn to events about to begin, and then leave the restaurant.
 
@@ -76,7 +80,11 @@ The combination of these 3 solutions enables to control the flow of customers, h
 
     * When a restaurant is crowded,  enable the PoE port connected to the restaurant's camera with Meraki Switch API to start to the operation.
 
-    Ventilation for the crowded restaurant is improved by the automatic fan.  
+    Ventilation for the crowded restaurant is improved by the automatic fan.
+
+## Hardware
+
+Cisco Meraki MS Switches and MV Cameras are needed.
 
 ## Installation
 
@@ -93,26 +101,38 @@ $ pip install -r requirements.txt
 Edit settings.toml file.
 
 ```
-token = '' #Webex Teams Token
-subscription_key = '' #Azure Subscription-Key
-maps_key = '' #GoogleMaps-Key
-apikey= '' #Meraki-API-Key
-room_id = '' #Webex Teams roomId
-mentioned_id = '' #Webex Teams mentionedPeople
-network_id = '' #Meraki Network ID
-mssn = '' #Meraki MS S/N
-camlist = [] #Meraki MV S/N List
+token = '' #Webex Teams Token - https://developer.webex.com/my-apps/new/bot
+subscription_key = '' #Azure Subscription-Key - Can use Face API Free
+maps_key = '' #GoogleMaps-Key - https://cloud.google.com/maps-platform/
+apikey= '' #Meraki-API-Key - https://developer.cisco.com/meraki/api/#!authorization/obtaining-your-meraki-api-key
+room_id = '' #Webex Teams roomId - https://developer.webex.com/docs/api/v1/rooms/get-room-details
+mentioned_id = '' #Webex Teams mentionedPeople (email id of members that needs to be added inside the room)
+network_id = '' #Meraki Network ID - To obtain and note the Network ID execute the following steps: starting from - Go to https://developer.cisco.com/meraki/api-v1/#!get-organizations > click Configuration
+mssn = '' #Meraki MS S/N - switch serial number
+camlist = [] #Meraki MV S/N List - camera serial number
 ```
 
 ## Usage
+
+* Option 1 - Run with Python3
+
+```
+$ python app.py
+```
+
+* Option 2 - Run via Flask
 
 ```
 $ flask run
 ```
 
+Open the browser and access the following.
+
 * Solution 1
 
     http://0.0.0.0:5000
+
+![Avoid the 3Cs](static/images/solution1-ss.png)
 
 * Solution 2
 
